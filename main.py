@@ -11,6 +11,7 @@ class AutoClickerUI:
         self.root.title("Autoclicker")
 
         self.cps = 0
+        self.lastStart = 0
         
         self.main = main
 
@@ -31,10 +32,14 @@ class AutoClickerUI:
         self.startStopButton.pack(pady=10, padx=10)
     
     def startStop(self):
+        if time.time() - self.lastStart < 1:
+            return
+        
         if self.main.running:
             self.main.running = False
         else:
             self.main.running = True
+            self.lastStart = time.time()
             start_new_thread(self.main.click_thread, ())
 
     def validate_int(self, new_value: str):
