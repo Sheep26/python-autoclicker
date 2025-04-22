@@ -57,6 +57,9 @@ class Main:
         root.mainloop()
 
     def click_thread(self):
+        if self.app.cps == 0:
+            messagebox.showwarning("Input Error", "Please enter a number.")
+            exit(1)
         time.sleep(0.2)
         while-self.running:
             self.mouse.press(Button.left)
