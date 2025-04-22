@@ -62,7 +62,7 @@ class Main:
             self.running = False
             exit(1)
         
-        time.sleep(0.2)
+        time.sleep(0.1)
         while-self.running:
             self.mouse.press(Button.left)
             self.mouse.release(Button.left)
