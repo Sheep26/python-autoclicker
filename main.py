@@ -45,7 +45,6 @@ class AutoClickerUI:
         text = self.entry.get()
         try:
             self.cps = int(text)
-            print(f"Saved value: {self.cps}")
         except:
             messagebox.showwarning("Input Error", "Please enter a number.")
 
