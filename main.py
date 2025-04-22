@@ -4,7 +4,6 @@ import tkinter as tk
 from tkinter import messagebox
 from _thread import start_new_thread, interrupt_main
 import time
-import sys
 
 class AutoClickerUI:
     def __init__(self, root, main):
