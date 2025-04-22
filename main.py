@@ -59,6 +59,7 @@ class Main:
     def click_thread(self):
         if self.app.cps == 0:
             messagebox.showwarning("Input Error", "Please enter a number.")
+            self.running = False
             exit(1)
         
         time.sleep(0.2)
