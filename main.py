@@ -37,14 +37,14 @@ class AutoClickerUI:
             self.main.running = True
             start_new_thread(self.main.click_thread, ())
 
-    def validate_int(self, new_value):
+    def validate_int(self, new_value: str):
         """Allow only empty string or valid integer"""
-        return new_value == "" or new_value.isdigit()
+        return new_value == "" or new_value.replace(".", "").isdigit()
 
     def save_input(self):
         text = self.entry.get()
         try:
-            self.cps = int(text)
+            self.cps = float(text)
         except:
             messagebox.showwarning("Input Error", "Please enter a number.")
 
