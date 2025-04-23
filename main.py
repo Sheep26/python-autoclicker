@@ -8,6 +8,7 @@ import time
 class AutoClickerUI:
     def __init__(self, root, main):
         self.root = root
+        self.root.resizable(False, False)
         self.root.title("Autoclicker")
 
         self.cps = 0
